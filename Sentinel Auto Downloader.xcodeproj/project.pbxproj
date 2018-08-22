@@ -7,7 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A7AEF27B20E67DE0007AD6A4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7AEF27A20E67DE0007AD6A4 /* main.cpp */; };
+		A7F4C75520EF11D2004B1E44 /* countline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74720EF11D1004B1E44 /* countline.cpp */; };
+		A7F4C75620EF11D2004B1E44 /* ReadXML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74820EF11D1004B1E44 /* ReadXML.cpp */; };
+		A7F4C75720EF11D2004B1E44 /* isnumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74920EF11D2004B1E44 /* isnumber.cpp */; };
+		A7F4C75820EF11D2004B1E44 /* ReadProfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74A20EF11D2004B1E44 /* ReadProfile.cpp */; };
+		A7F4C75920EF11D2004B1E44 /* CreateProfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74B20EF11D2004B1E44 /* CreateProfile.cpp */; };
+		A7F4C75A20EF11D2004B1E44 /* SAD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74C20EF11D2004B1E44 /* SAD.cpp */; };
+		A7F4C75B20EF11D2004B1E44 /* readfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74D20EF11D2004B1E44 /* readfile.cpp */; };
+		A7F4C75C20EF11D2004B1E44 /* fexists.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74E20EF11D2004B1E44 /* fexists.cpp */; };
+		A7F4C75D20EF11D2004B1E44 /* SearchProfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74F20EF11D2004B1E44 /* SearchProfile.cpp */; };
+		A7F4C75E20EF11D2004B1E44 /* string2char.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C75020EF11D2004B1E44 /* string2char.cpp */; };
+		A7F4C75F20EF11D2004B1E44 /* Search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C75120EF11D2004B1E44 /* Search.cpp */; };
+		A7F4C76120EF11D2004B1E44 /* Product.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C75320EF11D2004B1E44 /* Product.cpp */; };
+		A7F4C76220EF11D2004B1E44 /* Configure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C75420EF11D2004B1E44 /* Configure.cpp */; };
+		A7F4C76B20EF1295004B1E44 /* libxerces-c-3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4C76A20EF1295004B1E44 /* libxerces-c-3.2.a */; };
+		A7F4C76F20EF1B7D004B1E44 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4C76E20EF1B7D004B1E44 /* libcurl.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,15 +34,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		A7F4C73B20EF112F004B1E44 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A7AEF27720E67DE0007AD6A4 /* Sentinel Auto Downloader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Sentinel Auto Downloader"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7AEF27A20E67DE0007AD6A4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A7AEF27720E67DE0007AD6A4 /* Sentinel Auto Downloader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Sentinel Auto Downloader"; path = sad; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F4C73D20EF112F004B1E44 /* SAD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SAD; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F4C74720EF11D1004B1E44 /* countline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = countline.cpp; path = Sentinel_Auto_Downloader/src/countline.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C74820EF11D1004B1E44 /* ReadXML.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReadXML.cpp; path = Sentinel_Auto_Downloader/src/ReadXML.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C74920EF11D2004B1E44 /* isnumber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = isnumber.cpp; path = Sentinel_Auto_Downloader/src/isnumber.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C74A20EF11D2004B1E44 /* ReadProfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReadProfile.cpp; path = Sentinel_Auto_Downloader/src/ReadProfile.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C74B20EF11D2004B1E44 /* CreateProfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreateProfile.cpp; path = Sentinel_Auto_Downloader/src/CreateProfile.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C74C20EF11D2004B1E44 /* SAD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SAD.cpp; path = Sentinel_Auto_Downloader/src/SAD.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C74D20EF11D2004B1E44 /* readfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = readfile.cpp; path = Sentinel_Auto_Downloader/src/readfile.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C74E20EF11D2004B1E44 /* fexists.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fexists.cpp; path = Sentinel_Auto_Downloader/src/fexists.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C74F20EF11D2004B1E44 /* SearchProfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SearchProfile.cpp; path = Sentinel_Auto_Downloader/src/SearchProfile.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C75020EF11D2004B1E44 /* string2char.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = string2char.cpp; path = Sentinel_Auto_Downloader/src/string2char.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C75120EF11D2004B1E44 /* Search.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Search.cpp; path = Sentinel_Auto_Downloader/src/Search.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C75320EF11D2004B1E44 /* Product.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Product.cpp; path = Sentinel_Auto_Downloader/src/Product.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C75420EF11D2004B1E44 /* Configure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Configure.cpp; path = Sentinel_Auto_Downloader/src/Configure.cpp; sourceTree = SOURCE_ROOT; };
+		A7F4C76620EF1239004B1E44 /* SearchProfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SearchProfile.h; path = Sentinel_Auto_Downloader/include/SearchProfile.h; sourceTree = "<group>"; };
+		A7F4C76720EF1239004B1E44 /* sad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sad.h; path = Sentinel_Auto_Downloader/include/sad.h; sourceTree = "<group>"; };
+		A7F4C76820EF1239004B1E44 /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Product.h; path = Sentinel_Auto_Downloader/include/Product.h; sourceTree = "<group>"; };
+		A7F4C76A20EF1295004B1E44 /* libxerces-c-3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libxerces-c-3.2.a"; path = "Sentinel_Auto_Downloader/lib/libxerces-c-3.2.a"; sourceTree = "<group>"; };
+		A7F4C76C20EF1627004B1E44 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = Sentinel_Auto_Downloader/lib/libcurl.a; sourceTree = "<group>"; };
+		A7F4C76E20EF1B7D004B1E44 /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A7AEF27420E67DE0007AD6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F4C76F20EF1B7D004B1E44 /* libcurl.tbd in Frameworks */,
+				A7F4C76B20EF1295004B1E44 /* libxerces-c-3.2.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F4C73A20EF112F004B1E44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,8 +92,9 @@
 		A7AEF26E20E67DE0007AD6A4 = {
 			isa = PBXGroup;
 			children = (
-				A7AEF27920E67DE0007AD6A4 /* Sentinel Auto Downloader */,
+				A7F4C74420EF1194004B1E44 /* Sentinel Auto Downloader */,
 				A7AEF27820E67DE0007AD6A4 /* Products */,
+				A7F4C76920EF1295004B1E44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,16 +102,58 @@
 			isa = PBXGroup;
 			children = (
 				A7AEF27720E67DE0007AD6A4 /* Sentinel Auto Downloader */,
+				A7F4C73D20EF112F004B1E44 /* SAD */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A7AEF27920E67DE0007AD6A4 /* Sentinel Auto Downloader */ = {
+		A7F4C74420EF1194004B1E44 /* Sentinel Auto Downloader */ = {
 			isa = PBXGroup;
 			children = (
-				A7AEF27A20E67DE0007AD6A4 /* main.cpp */,
+				A7F4C74620EF11AA004B1E44 /* include */,
+				A7F4C74520EF11A5004B1E44 /* src */,
 			);
-			path = "Sentinel Auto Downloader";
+			name = "Sentinel Auto Downloader";
+			sourceTree = "<group>";
+		};
+		A7F4C74520EF11A5004B1E44 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A7F4C75420EF11D2004B1E44 /* Configure.cpp */,
+				A7F4C74720EF11D1004B1E44 /* countline.cpp */,
+				A7F4C74B20EF11D2004B1E44 /* CreateProfile.cpp */,
+				A7F4C74E20EF11D2004B1E44 /* fexists.cpp */,
+				A7F4C74920EF11D2004B1E44 /* isnumber.cpp */,
+				A7F4C75320EF11D2004B1E44 /* Product.cpp */,
+				A7F4C74D20EF11D2004B1E44 /* readfile.cpp */,
+				A7F4C74A20EF11D2004B1E44 /* ReadProfile.cpp */,
+				A7F4C74820EF11D1004B1E44 /* ReadXML.cpp */,
+				A7F4C74C20EF11D2004B1E44 /* SAD.cpp */,
+				A7F4C75120EF11D2004B1E44 /* Search.cpp */,
+				A7F4C74F20EF11D2004B1E44 /* SearchProfile.cpp */,
+				A7F4C75020EF11D2004B1E44 /* string2char.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A7F4C74620EF11AA004B1E44 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A7F4C76820EF1239004B1E44 /* Product.h */,
+				A7F4C76720EF1239004B1E44 /* sad.h */,
+				A7F4C76620EF1239004B1E44 /* SearchProfile.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		A7F4C76920EF1295004B1E44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7F4C76E20EF1B7D004B1E44 /* libcurl.tbd */,
+				A7F4C76C20EF1627004B1E44 /* libcurl.a */,
+				A7F4C76A20EF1295004B1E44 /* libxerces-c-3.2.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +176,23 @@
 			productReference = A7AEF27720E67DE0007AD6A4 /* Sentinel Auto Downloader */;
 			productType = "com.apple.product-type.tool";
 		};
+		A7F4C73C20EF112F004B1E44 /* SAD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7F4C74120EF1130004B1E44 /* Build configuration list for PBXNativeTarget "SAD" */;
+			buildPhases = (
+				A7F4C73920EF112F004B1E44 /* Sources */,
+				A7F4C73A20EF112F004B1E44 /* Frameworks */,
+				A7F4C73B20EF112F004B1E44 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SAD;
+			productName = SAD;
+			productReference = A7F4C73D20EF112F004B1E44 /* SAD */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +203,9 @@
 				ORGANIZATIONNAME = "Constantine VI";
 				TargetAttributes = {
 					A7AEF27620E67DE0007AD6A4 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					A7F4C73C20EF112F004B1E44 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -109,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				A7AEF27620E67DE0007AD6A4 /* Sentinel Auto Downloader */,
+				A7F4C73C20EF112F004B1E44 /* SAD */,
 			);
 		};
 /* End PBXProject section */
@@ -118,7 +233,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7AEF27B20E67DE0007AD6A4 /* main.cpp in Sources */,
+				A7F4C75F20EF11D2004B1E44 /* Search.cpp in Sources */,
+				A7F4C75B20EF11D2004B1E44 /* readfile.cpp in Sources */,
+				A7F4C76220EF11D2004B1E44 /* Configure.cpp in Sources */,
+				A7F4C75A20EF11D2004B1E44 /* SAD.cpp in Sources */,
+				A7F4C75C20EF11D2004B1E44 /* fexists.cpp in Sources */,
+				A7F4C75520EF11D2004B1E44 /* countline.cpp in Sources */,
+				A7F4C75820EF11D2004B1E44 /* ReadProfile.cpp in Sources */,
+				A7F4C75E20EF11D2004B1E44 /* string2char.cpp in Sources */,
+				A7F4C76120EF11D2004B1E44 /* Product.cpp in Sources */,
+				A7F4C75D20EF11D2004B1E44 /* SearchProfile.cpp in Sources */,
+				A7F4C75920EF11D2004B1E44 /* CreateProfile.cpp in Sources */,
+				A7F4C75720EF11D2004B1E44 /* isnumber.cpp in Sources */,
+				A7F4C75620EF11D2004B1E44 /* ReadXML.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F4C73920EF112F004B1E44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,13 +371,53 @@
 		A7AEF27F20E67DE0007AD6A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WGCBB83Q4T;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Sentinel_Auto_Downloader/include";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Sentinel_Auto_Downloader/lib";
+				OTHER_LDFLAGS = (
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreServices,
+				);
+				PRODUCT_MODULE_NAME = sad;
+				PRODUCT_NAME = sad;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		A7AEF28020E67DE0007AD6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WGCBB83Q4T;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Sentinel_Auto_Downloader/include";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Sentinel_Auto_Downloader/lib";
+				OTHER_LDFLAGS = (
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreServices,
+				);
+				PRODUCT_MODULE_NAME = sad;
+				PRODUCT_NAME = sad;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		A7F4C74220EF1130004B1E44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WGCBB83Q4T;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		A7AEF28020E67DE0007AD6A4 /* Release */ = {
+		A7F4C74320EF1130004B1E44 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -269,6 +443,15 @@
 			buildConfigurations = (
 				A7AEF27F20E67DE0007AD6A4 /* Debug */,
 				A7AEF28020E67DE0007AD6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7F4C74120EF1130004B1E44 /* Build configuration list for PBXNativeTarget "SAD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F4C74220EF1130004B1E44 /* Debug */,
+				A7F4C74320EF1130004B1E44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
