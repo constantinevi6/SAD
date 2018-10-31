@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A76226FA2142688F00F2D487 /* download.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76226F82142688F00F2D487 /* download.cpp */; };
 		A7F4C75520EF11D2004B1E44 /* countline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74720EF11D1004B1E44 /* countline.cpp */; };
 		A7F4C75620EF11D2004B1E44 /* ReadXML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74820EF11D1004B1E44 /* ReadXML.cpp */; };
 		A7F4C75720EF11D2004B1E44 /* isnumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74920EF11D2004B1E44 /* isnumber.cpp */; };
@@ -46,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A76226F82142688F00F2D487 /* download.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = download.cpp; path = Sentinel_Auto_Downloader/src/download.cpp; sourceTree = SOURCE_ROOT; };
+		A76226F92142688F00F2D487 /* download.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = download.hpp; sourceTree = SOURCE_ROOT; };
 		A7AEF27720E67DE0007AD6A4 /* Sentinel Auto Downloader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Sentinel Auto Downloader"; path = sad; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F4C73D20EF112F004B1E44 /* SAD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SAD; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F4C74720EF11D1004B1E44 /* countline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = countline.cpp; path = Sentinel_Auto_Downloader/src/countline.cpp; sourceTree = SOURCE_ROOT; };
@@ -120,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				A7F4C75420EF11D2004B1E44 /* Configure.cpp */,
+				A76226F82142688F00F2D487 /* download.cpp */,
 				A7F4C74720EF11D1004B1E44 /* countline.cpp */,
 				A7F4C74B20EF11D2004B1E44 /* CreateProfile.cpp */,
 				A7F4C74E20EF11D2004B1E44 /* fexists.cpp */,
@@ -139,6 +143,7 @@
 		A7F4C74620EF11AA004B1E44 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				A76226F92142688F00F2D487 /* download.hpp */,
 				A7F4C76820EF1239004B1E44 /* Product.h */,
 				A7F4C76720EF1239004B1E44 /* sad.h */,
 				A7F4C76620EF1239004B1E44 /* SearchProfile.h */,
@@ -242,6 +247,7 @@
 				A7F4C75820EF11D2004B1E44 /* ReadProfile.cpp in Sources */,
 				A7F4C75E20EF11D2004B1E44 /* string2char.cpp in Sources */,
 				A7F4C76120EF11D2004B1E44 /* Product.cpp in Sources */,
+				A76226FA2142688F00F2D487 /* download.cpp in Sources */,
 				A7F4C75D20EF11D2004B1E44 /* SearchProfile.cpp in Sources */,
 				A7F4C75920EF11D2004B1E44 /* CreateProfile.cpp in Sources */,
 				A7F4C75720EF11D2004B1E44 /* isnumber.cpp in Sources */,
