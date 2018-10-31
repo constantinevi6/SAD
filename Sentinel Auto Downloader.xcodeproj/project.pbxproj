@@ -48,8 +48,8 @@
 
 /* Begin PBXFileReference section */
 		A76226F82142688F00F2D487 /* download.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = download.cpp; path = Sentinel_Auto_Downloader/src/download.cpp; sourceTree = SOURCE_ROOT; };
-		A76226F92142688F00F2D487 /* download.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = download.hpp; sourceTree = SOURCE_ROOT; };
 		A7AEF27720E67DE0007AD6A4 /* Sentinel Auto Downloader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Sentinel Auto Downloader"; path = sad; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7C4202F2189A9AF00211DFD /* download.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = download.hpp; path = Sentinel_Auto_Downloader/include/download.hpp; sourceTree = "<group>"; };
 		A7F4C73D20EF112F004B1E44 /* SAD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SAD; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F4C74720EF11D1004B1E44 /* countline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = countline.cpp; path = Sentinel_Auto_Downloader/src/countline.cpp; sourceTree = SOURCE_ROOT; };
 		A7F4C74820EF11D1004B1E44 /* ReadXML.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReadXML.cpp; path = Sentinel_Auto_Downloader/src/ReadXML.cpp; sourceTree = SOURCE_ROOT; };
@@ -143,7 +143,7 @@
 		A7F4C74620EF11AA004B1E44 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				A76226F92142688F00F2D487 /* download.hpp */,
+				A7C4202F2189A9AF00211DFD /* download.hpp */,
 				A7F4C76820EF1239004B1E44 /* Product.h */,
 				A7F4C76720EF1239004B1E44 /* sad.h */,
 				A7F4C76620EF1239004B1E44 /* SearchProfile.h */,
