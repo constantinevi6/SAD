@@ -17,7 +17,6 @@
 		A7F4C75B20EF11D2004B1E44 /* readfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74D20EF11D2004B1E44 /* readfile.cpp */; };
 		A7F4C75C20EF11D2004B1E44 /* fexists.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74E20EF11D2004B1E44 /* fexists.cpp */; };
 		A7F4C75D20EF11D2004B1E44 /* SearchProfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C74F20EF11D2004B1E44 /* SearchProfile.cpp */; };
-		A7F4C75E20EF11D2004B1E44 /* string2char.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C75020EF11D2004B1E44 /* string2char.cpp */; };
 		A7F4C75F20EF11D2004B1E44 /* Search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C75120EF11D2004B1E44 /* Search.cpp */; };
 		A7F4C76120EF11D2004B1E44 /* Product.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C75320EF11D2004B1E44 /* Product.cpp */; };
 		A7F4C76220EF11D2004B1E44 /* Configure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4C75420EF11D2004B1E44 /* Configure.cpp */; };
@@ -60,7 +59,6 @@
 		A7F4C74D20EF11D2004B1E44 /* readfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = readfile.cpp; path = Sentinel_Auto_Downloader/src/readfile.cpp; sourceTree = SOURCE_ROOT; };
 		A7F4C74E20EF11D2004B1E44 /* fexists.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fexists.cpp; path = Sentinel_Auto_Downloader/src/fexists.cpp; sourceTree = SOURCE_ROOT; };
 		A7F4C74F20EF11D2004B1E44 /* SearchProfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SearchProfile.cpp; path = Sentinel_Auto_Downloader/src/SearchProfile.cpp; sourceTree = SOURCE_ROOT; };
-		A7F4C75020EF11D2004B1E44 /* string2char.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = string2char.cpp; path = Sentinel_Auto_Downloader/src/string2char.cpp; sourceTree = SOURCE_ROOT; };
 		A7F4C75120EF11D2004B1E44 /* Search.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Search.cpp; path = Sentinel_Auto_Downloader/src/Search.cpp; sourceTree = SOURCE_ROOT; };
 		A7F4C75320EF11D2004B1E44 /* Product.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Product.cpp; path = Sentinel_Auto_Downloader/src/Product.cpp; sourceTree = SOURCE_ROOT; };
 		A7F4C75420EF11D2004B1E44 /* Configure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Configure.cpp; path = Sentinel_Auto_Downloader/src/Configure.cpp; sourceTree = SOURCE_ROOT; };
@@ -135,7 +133,6 @@
 				A7F4C74C20EF11D2004B1E44 /* SAD.cpp */,
 				A7F4C75120EF11D2004B1E44 /* Search.cpp */,
 				A7F4C74F20EF11D2004B1E44 /* SearchProfile.cpp */,
-				A7F4C75020EF11D2004B1E44 /* string2char.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -245,7 +242,6 @@
 				A7F4C75C20EF11D2004B1E44 /* fexists.cpp in Sources */,
 				A7F4C75520EF11D2004B1E44 /* countline.cpp in Sources */,
 				A7F4C75820EF11D2004B1E44 /* ReadProfile.cpp in Sources */,
-				A7F4C75E20EF11D2004B1E44 /* string2char.cpp in Sources */,
 				A7F4C76120EF11D2004B1E44 /* Product.cpp in Sources */,
 				A76226FA2142688F00F2D487 /* download.cpp in Sources */,
 				A7F4C75D20EF11D2004B1E44 /* SearchProfile.cpp in Sources */,
