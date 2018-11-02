@@ -10,7 +10,7 @@
 #define download_hpp
 
 #include <stdio.h>
-#include <curl/curl.h>
+#include "curl/curl.h"
 #include <iostream>
 
 #define MAXWORK 200

@@ -5,12 +5,13 @@
 //  Copyright © 2018年 Constantine VI. All rights reserved.
 //
 
+#include <string>
 #include <iostream>
 #include <fstream>
 
 using namespace std;
 
-int CreateProfile(string Profile){
+int CreateProfile(std::string Profile){
     cout << "Creating input profile \"" << Profile << "\"..." << endl;
     fstream ProfileOutput;
     ProfileOutput.open(Profile, ios::out);

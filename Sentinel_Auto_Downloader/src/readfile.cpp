@@ -14,7 +14,7 @@ using namespace std;
 
 string *readfile(string InputFile)
 {
-    int LineCount = countline(string2char(InputFile));
+    int LineCount = countline(InputFile.c_str());
     string *Output = new string[LineCount];
     string Line = "";
     fstream Input(InputFile, ifstream::in);

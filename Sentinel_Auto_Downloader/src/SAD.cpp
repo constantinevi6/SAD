@@ -67,6 +67,6 @@ int main(int argc, const char * argv[]) {
     check_package("wget");
     Search(SearchConfigure, ProfileList);
     vector<Product> *ProductList = new vector<Product>;
-    ReadXML(string2char(SearchResultFile), ProductList);
+    ReadXML(SearchResultFile, ProductList);
     download_wget(SearchConfigure,ProductList);
 }

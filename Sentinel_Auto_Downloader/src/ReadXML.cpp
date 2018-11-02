@@ -16,11 +16,11 @@
 using namespace xercesc;
 using namespace std;
 
-int ReadXML(char* InputXML, vector<Product> *ProductList)
+int ReadXML(std::string InputXML, vector<Product> *ProductList)
 {
     XMLPlatformUtils::Initialize();
     XercesDOMParser *XML = new XercesDOMParser();
-    XML->parse(InputXML);
+    XML->parse(InputXML.c_str());
     DOMDocument *xmlDoc = XML->getDocument();
     DOMNodeList* entryList = xmlDoc->getElementsByTagName(XMLString::transcode("entry"));
     unsigned long ProductCount = entryList->getLength();

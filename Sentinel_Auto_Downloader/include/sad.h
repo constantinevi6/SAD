@@ -27,7 +27,6 @@ public:
     bool isNull();
 };
 
-char *string2char(std::string Inputstring);
 std::string *readfile(std::string InputFile);
 bool fexists(const std::string& filename);
 int countline(const char *InputFile);
@@ -36,5 +35,5 @@ bool is_number(const std::string &Inputstring);
 int CreateProfile(std::string Profile);
 int ReadProfile(std::string InputFile, std::vector<Configure> *InputConfigure, std::vector<SearchProfile> *ProfileList);
 int Search(std::vector<Configure> *ConfigureList, std::vector<SearchProfile> *ProfileList);
-int ReadXML(char* InputXML, std::vector<Product> *ProductList);
+int ReadXML(std::string InputXML, std::vector<Product> *ProductList);
 #endif /* sad_h */
