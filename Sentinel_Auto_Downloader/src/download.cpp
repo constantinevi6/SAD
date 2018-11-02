@@ -11,9 +11,11 @@
 #include "Product.h"
 #include <string.h>
 #include <iostream>
+#include <filesystem>
 #include <sys/stat.h>
 
 using namespace std;
+using namespace std::experimental::filesystem::v1;
 
 long filelength(char *f)
 {
@@ -52,19 +54,23 @@ void download_wget(vector<Configure> *ConfigureList, vector<Product> *ProductLis
 
 void check_package(std::string Package)
 {
+	cout << "Checking " << Package << "...." << endl;
     string PATHList = getenv("PATH");
     unsigned long Break;
     unsigned long PATHListSize;
     bool is_Package_exist=false;
     do {
-        Break = PATHList.find(":",0);
+        Break = PATHList.find(PATH_Separator,0);
         PATHListSize = PATHList.size();
         string PATH;
         PATH.assign(PATHList,0,Break);
         PATHList.assign(PATHList,Break + 1,PATHListSize - Break);
-        string PackagePATH = PATH + "/" + Package;
-        if (fexists(PackagePATH)) {
+        string PackagePATH = PATH + "\\" + Package + Filename_Extension;
+		string PackageName = Package + Filename_Extension;
+		path pPackagePATH = PATH / PackageName;
+        if (exists(pPackagePATH)) {
             is_Package_exist=true;
+			cout << "Find " << Package << " in path: " << pPackagePATH << endl;
         }
     } while (!is_Package_exist && Break != std::string::npos);
     if (!is_Package_exist) {

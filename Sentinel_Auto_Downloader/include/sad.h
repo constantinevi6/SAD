@@ -28,7 +28,6 @@ public:
 };
 
 std::string *readfile(std::string InputFile);
-bool fexists(const std::string& filename);
 int countline(const char *InputFile);
 bool is_number(const std::string &Inputstring);
 

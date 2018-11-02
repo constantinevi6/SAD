@@ -27,9 +27,6 @@
     <ClCompile Include="src\download.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\fexists.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\isnumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

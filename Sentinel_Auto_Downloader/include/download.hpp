@@ -8,6 +8,13 @@
 
 #ifndef download_hpp
 #define download_hpp
+#ifdef __linux__
+	#define PATH_Separator ":"
+	#define Filename_Extension NULL
+#elif _WIN32
+	#define PATH_Separator ";"
+	#define Filename_Extension ".exe"
+#endif
 
 #include <stdio.h>
 #include "curl/curl.h"

@@ -9,9 +9,11 @@
 #include "SearchProfile.h"
 #include "Product.h"
 #include "download.hpp"
+#include <filesystem>
 #include <iostream>
 
 using namespace std;
+using namespace std::experimental::filesystem::v1;
 
 int main(int argc, const char * argv[]) {
     string InputFile;
@@ -53,7 +55,7 @@ int main(int argc, const char * argv[]) {
     }
     
     //檢查輸入檔案是否存在
-    if (!fexists(InputFile))
+    if (!exists(InputFile))
     {
         CreateProfile(InputFile);
         cout << "Please setting the search profile." << endl;
