@@ -15,7 +15,13 @@
 #include <sys/stat.h>
 
 using namespace std;
-using namespace std::experimental::filesystem::v1;
+
+#ifdef __linux__
+    using namespace std::filesystem;
+#elif _WIN32
+    using namespace std::experimental::filesystem::v1;
+#endif
+
 
 long filelength(char *f)
 {
