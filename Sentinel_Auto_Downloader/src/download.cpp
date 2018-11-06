@@ -54,7 +54,8 @@ void download_wget(vector<Configure> *ConfigureList, vector<Product> *ProductLis
         string WgetOutputDocument = " --output-document=" + Product ->call_title() + ".zip";
         string WgetURL = " \"" + Product -> call_url() + "\"";
         string cmd = Wget + WgetParmeter + WgetUsername + WgetPassword + WgetOutputDocument + WgetURL;
-        system(cmd.c_str());
+		cout << cmd << endl;
+		system(cmd.c_str());
     }
 }
 

@@ -48,7 +48,7 @@ void Product::set(std::string ProductTitle)
 
 void Product::get_url()
 {
-    DownloadLink = (string)OpenDataHub + "('" + UUID + "')" + "/" + "\\$value";
+    DownloadLink = (string)OpenDataHub + "('" + UUID + "')" + "/" + URLSlash + "$value";
 }
 
 void Product::get_uuid(std::string uuid)

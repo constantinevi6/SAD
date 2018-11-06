@@ -15,6 +15,12 @@
 #define OpenDataHub "https://scihub.copernicus.eu/dhus/odata/v1/Products"
 #define ApiHub "https://scihub.copernicus.eu/apihub/odata/v1/Products"
 
+#ifdef __linux__
+	#define URLSlash "\\"
+#elif _WIN32
+	#define URLSlash ""
+#endif
+
 class Configure
 {
 private:
