@@ -7,15 +7,22 @@
 //
 
 #include "Product.h"
+#include "node.hpp"
 #include "sad.h"
+#include <math.h>
+#include <iostream>
 
 using namespace std;
 
 Product::Product()
 {
     Title = "";
+    PlatformName="";
+    FileSize=0;
+
     Satellite = "";
     Mode = "";
+    Category="";
     Type = "";
     Resolution = "";
     Level = "";
@@ -29,7 +36,84 @@ Product::Product()
     DatabaseTitle = "";
     UUID = "";
 }
-void Product::set(std::string ProductTitle)
+
+void Product::read(xercesc::DOMNode *ProductEntry)
+{
+    
+    xercesc::DOMNodeList* nodeList = ProductEntry->getChildNodes();
+    for (unsigned long i = 0; i < nodeList->getLength(); i++)
+    {
+        xercesc::DOMNode *node = nodeList->item(i);
+        string nodeName = xercesc::XMLString::transcode(node->getNodeName());
+        if (nodeName == "title")
+        {
+            Title = xercesc::XMLString::transcode(node->getTextContent());
+        }
+        else if (nodeName == "id")
+        {
+            UUID = xercesc::XMLString::transcode(node->getTextContent());
+            get_url();
+        }
+        else if (nodeName == "str")
+        {
+            string Attribute = findAttributeValue("name", node);
+            if (Attribute == "platformname") {
+                PlatformName = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "platformname: " << PlatformName << endl;
+            }
+            else if (Attribute == "size") {
+                string filesize = xercesc::XMLString::transcode(node->getTextContent());
+                string unit;
+                unit.assign(filesize,filesize.size()-2,filesize.size());
+                filesize.assign(filesize,0,filesize.size()-3);
+                FileSize = stod(filesize);
+                cout << "File size: " << FileSize << " " << unit << endl;
+            }
+            else if (Attribute == "instrumentshortname") {
+                InstrumentShortname = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "File InstrumentShortname: " << InstrumentShortname << endl;
+            }
+            else if (Attribute == "sensoroperationalmode") {
+                SensorOperationalMode = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "File SensorOperationalMode: " << SensorOperationalMode << endl;
+            }
+            else if (Attribute == "instrumentname") {
+                InstrumentName = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "File InstrumentName: " << InstrumentName << endl;
+            }
+            else if (Attribute == "swathidentifier") {
+                SwathIdentifier = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "File SwathIdentifier: " << SwathIdentifier << endl;
+            }
+            else if (Attribute == "orbitdirection") {
+                OrbitDirection = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "File OrbitDirection: " << OrbitDirection << endl;
+            }
+            else if (Attribute == "polarisationmode") {
+                PolarisationMode = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "File PolarisationMode: " << PolarisationMode << endl;
+            }
+            else if (Attribute == "productclass") {
+                ProductClass = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "File ProductClass: " << ProductClass << endl;
+            }
+            else if (Attribute == "platformserialidentifier") {
+                PlatformSerialIdentifier = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "File PlatformSerialIdentifier: " << PlatformSerialIdentifier << endl;
+            }
+            else if (Attribute == "processinglevel") {
+                ProcessingLevel = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "File ProcessingLevel: " << ProcessingLevel << endl;
+            }
+            else if (Attribute == "producttype") {
+                ProductType = xercesc::XMLString::transcode(node->getTextContent());
+                cout << "File ProductType: " << ProductType << endl;
+            }
+        }
+    }
+}
+
+void Product::set_s1(std::string ProductTitle)
 {
     Title = ProductTitle;
     Satellite.assign(Title,0,3);
@@ -44,6 +128,15 @@ void Product::set(std::string ProductTitle)
     Orbit.assign(Title,49,6);
     TakeID.assign(Title,56,6);
     UniqueID.assign(Title,63,4);
+}
+
+void Product::set_s2(std::string ProductTitle)
+{
+    Title = ProductTitle;
+    Satellite.assign(Title,0,3);
+    Category.assign(Title,4,3);
+    Level.assign(Title,7,3);
+    StartTime.assign(Title,11,15);
 }
 
 void Product::get_url()

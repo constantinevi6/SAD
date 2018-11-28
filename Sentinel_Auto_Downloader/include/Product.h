@@ -5,6 +5,8 @@
 //  Copyright © 2018年 Constantine VI. All rights reserved.
 //
 
+#include "xercesc/parsers/XercesDOMParser.hpp"
+#include "xercesc/dom/DOM.hpp"
 #ifndef product_h
 #define product_h
 
@@ -13,11 +15,25 @@
 class Product
 {
 private:
+    std::string InstrumentShortname;
+    std::string SensorOperationalMode;
+    std::string InstrumentName;
+    std::string SwathIdentifier;
+    std::string OrbitDirection;
+    std::string PolarisationMode;
+    std::string ProductClass;
+    std::string PlatformSerialIdentifier;
+    std::string ProcessingLevel;
+    std::string ProductType;
+    std::string PlatformName;
+    double FileSize;
+
     std::string Title;
     std::string UUID;
     std::string DownloadLink;
     std::string Satellite;
     std::string Mode;
+    std::string Category;
     std::string Type;
     std::string Resolution;
     std::string Level;
@@ -32,7 +48,9 @@ private:
     std::string DatabaseTitle;
 public:
     Product();
-    void set(std::string ProductTitle);
+    void read(xercesc::DOMNode *ProductEntry);
+    void set_s1(std::string ProductTitle);
+    void set_s2(std::string ProductTitle);
     void get_url();
     void get_uuid(std::string uuid);
     std::string &call_title();

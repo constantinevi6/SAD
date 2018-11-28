@@ -30,23 +30,7 @@ int ReadXML(std::string InputXML, vector<Product> *ProductList)
     {
         Product Product;
         DOMNode *entry = entryList->item(i);
-        DOMNodeList* nodeList = entry->getChildNodes();
-        for (unsigned long j = 0; j < nodeList->getLength(); j++)
-        {
-            DOMNode *node = nodeList->item(j);
-            string nodeName = XMLString::transcode(node->getNodeName());
-            if (nodeName == "title")
-            {
-                string ProductTitle = XMLString::transcode(node->getTextContent());
-                Product.set(ProductTitle);
-            }
-            else if (nodeName == "id")
-            {
-                string UUID = XMLString::transcode(node->getTextContent());
-                Product.get_uuid(UUID);
-                Product.get_url();
-            }
-        }
+        Product.read(entry);
         cout << Product.call_title() << endl;
         ProductList -> push_back(Product);
     }
