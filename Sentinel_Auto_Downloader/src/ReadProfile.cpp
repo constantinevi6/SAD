@@ -16,7 +16,7 @@ int ReadProfile(string InputFile, std::vector<Configure> *ConfigureList, std::ve
 {
     string SearchKeyword[SearchProfileCount] = {"platformname","","filename","footprint","producttype","sensoroperationalmode","orbitdirection","","","polarisationmode","swathidentifier","cloudcoverpercentage","collection"};
     string *ProfileArr = readfile(InputFile);
-    string ConfigureKeyword[SearchConfigureCount] = {"Downdloa Path","Username","Password"};
+    string ConfigureKeyword[SearchConfigureCount] = {"Download Path","Username","Password"};
     int LineDelayCount = LineDelay;
     int LineNumber = 0;
     //讀取程式參數

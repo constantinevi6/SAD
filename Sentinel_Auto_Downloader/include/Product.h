@@ -49,8 +49,7 @@ private:
 public:
     Product();
     void read(xercesc::DOMNode *ProductEntry);
-    void set_s1(std::string ProductTitle);
-    void set_s2(std::string ProductTitle);
+    void set(std::string ProductTitle);
     void get_url();
     void get_uuid(std::string uuid);
     std::string &call_title();

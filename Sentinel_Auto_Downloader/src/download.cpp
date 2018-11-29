@@ -11,6 +11,7 @@
 #include "Product.h"
 #include <string.h>
 #include <iostream>
+#include <sys/io.h>
 #include <filesystem>
 #include <sys/stat.h>
 
@@ -51,11 +52,25 @@ void download_wget(vector<Configure> *ConfigureList, vector<Product> *ProductLis
         string WgetParmeter = " --no-check-certificate --continue";
         string WgetUsername = " --user=" + Username;
         string WgetPassword = " --password=" + Password;
-        string WgetOutputDocument = " --output-document=" + Product ->call_title() + ".zip";
+        string DownloadFile = DownloadPath + "/" + Product ->call_title() + ".zip";
+        cout << DownloadFile << endl;
+        string WgetOutputDocument = " --output-document=" + DownloadFile;
         string WgetURL = " \"" + Product -> call_url() + "\"";
-        string cmd = Wget + WgetParmeter + WgetUsername + WgetPassword + WgetOutputDocument + WgetURL;
-		cout << cmd << endl;
-		system(cmd.c_str());
+        
+        struct stat buffer;
+        string Database = "/Data/SAR_NAS/Sentinel1/";
+        Database = Database + Product -> call_database_title();
+        if (stat(Database.c_str(), &buffer) == 0) {
+            cout << "File exist at Database, skip...." << endl;
+        }
+        else if (stat(DownloadFile.c_str(), &buffer) == 0) {
+            cout << "File exist at download path, skip...." << endl;
+        }
+        else
+        {
+            string cmd = Wget + WgetParmeter + WgetUsername + WgetPassword + WgetOutputDocument + WgetURL;
+		    system(cmd.c_str());
+        }
     }
 }
 
