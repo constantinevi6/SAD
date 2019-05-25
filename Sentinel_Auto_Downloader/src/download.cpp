@@ -11,7 +11,7 @@
 #include "Product.h"
 #include <string.h>
 #include <iostream>
-#include <sys/io.h>
+//#include <sys/io.h>
 #include <filesystem>
 #include <sys/stat.h>
 
@@ -94,9 +94,9 @@ void check_package(std::string Package)
             is_Package_exist=true;
 			cout << "Find " << Package << " in path: " << pPackagePATH << endl;
         }
-    } while (!is_Package_exist && Break != std::string::npos);
+    } while (!is_Package_exist && Break <= PATHListSize);
     if (!is_Package_exist) {
-        cout << "Package: " << Package << " not found. Please install" << Package << " and try again." << endl;
+        cout << "Package: " << Package << " not found. Please install " << Package << " and try again." << endl;
         exit(1);
     }
 }
