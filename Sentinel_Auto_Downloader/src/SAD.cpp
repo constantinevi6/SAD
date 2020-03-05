@@ -18,7 +18,7 @@ using namespace std;
     #include <string.h>
     using namespace std::filesystem;
 #elif _WIN32
-    using namespace std::experimental::filesystem::v1;
+    using namespace std::filesystem;
 #endif
 
 int main(int argc, const char * argv[]) {

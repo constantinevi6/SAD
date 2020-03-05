@@ -20,7 +20,7 @@ using namespace std;
 #ifdef __linux__
     using namespace std::filesystem;
 #elif _WIN32
-    using namespace std::experimental::filesystem::v1;
+    using namespace std::filesystem;
 #endif
 
 
@@ -87,12 +87,12 @@ void check_package(std::string Package)
         string PATH;
         PATH.assign(PATHList,0,Break);
         PATHList.assign(PATHList,Break + 1,PATHListSize - Break);
-        string PackagePATH = PATH + "\\" + Package + Filename_Extension;
-		string PackageName = Package + Filename_Extension;
+        //path PackagePATH = PATH / Package + Filename_Extension;
+        path PackageName = Package + Filename_Extension;
 		path pPackagePATH = PATH / PackageName;
         if (exists(pPackagePATH)) {
             is_Package_exist=true;
-			cout << "Find " << Package << " in path: " << pPackagePATH << endl;
+			cout << "Find " << Package << " in path: " << pPackagePATH.string() << endl;
         }
     } while (!is_Package_exist && Break <= PATHListSize);
     if (!is_Package_exist) {
