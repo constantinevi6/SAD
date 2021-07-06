@@ -11,6 +11,9 @@
 #ifdef __linux__
 	#define PATH_Separator ":"
 	#define Filename_Extension ""
+#elif __APPLE__
+    #define PATH_Separator ":"
+    #define Filename_Extension ""
 #elif _WIN32
 	#define PATH_Separator ";"
 	#define Filename_Extension ".exe"

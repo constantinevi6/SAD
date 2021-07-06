@@ -18,7 +18,9 @@
 #ifdef __linux__
 	#define URLSlash "\\"
 #elif _WIN32
-	#define URLSlash ""
+	#define URLSlash "".
+#elif __APPLE__
+    #define URLSlash "\\"
 #endif
 
 class Configure
