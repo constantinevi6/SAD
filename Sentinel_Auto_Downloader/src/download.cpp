@@ -88,8 +88,8 @@ void check_package(std::string Package)
         PATH.assign(PATHList,0,Break);
         PATHList.assign(PATHList,Break + 1,PATHListSize - Break);
         //path PackagePATH = PATH / Package + Filename_Extension;
-        path PackageName = Package + Filename_Extension;
-		path pPackagePATH = PATH / PackageName;
+        filesystem::path PackageName = Package + Filename_Extension;
+        filesystem::path pPackagePATH = PATH / PackageName;
         if (exists(pPackagePATH)) {
             is_Package_exist=true;
 			cout << "Find " << Package << " in path: " << pPackagePATH.string() << endl;

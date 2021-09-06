@@ -40,66 +40,66 @@ Product::Product()
 void Product::read(xercesc::DOMNode *ProductEntry)
 {
     
-    xercesc::DOMNodeList* nodeList = ProductEntry->getChildNodes();
-    for (unsigned long i = 0; i < nodeList->getLength(); i++)
-    {
-        xercesc::DOMNode *node = nodeList->item(i);
-        string nodeName = xercesc::XMLString::transcode(node->getNodeName());
-        if (nodeName == "title")
-        {
-            Title = xercesc::XMLString::transcode(node->getTextContent());
-        }
-        else if (nodeName == "id")
-        {
-            UUID = xercesc::XMLString::transcode(node->getTextContent());
-            get_url();
-        }
-        else if (nodeName == "str")
-        {
-            string Attribute = findAttributeValue("name", node);
-            if (Attribute == "platformname") {
-                PlatformName = xercesc::XMLString::transcode(node->getTextContent());
-                set(Title);
-            }
-            else if (Attribute == "size") {
-                string filesize = xercesc::XMLString::transcode(node->getTextContent());
-                string unit;
-                unit.assign(filesize,filesize.size()-2,filesize.size());
-                filesize.assign(filesize,0,filesize.size()-3);
-                FileSize = stod(filesize);
-            }
-            else if (Attribute == "instrumentshortname") {
-                InstrumentShortname = xercesc::XMLString::transcode(node->getTextContent());
-            }
-            else if (Attribute == "sensoroperationalmode") {
-                SensorOperationalMode = xercesc::XMLString::transcode(node->getTextContent());
-            }
-            else if (Attribute == "instrumentname") {
-                InstrumentName = xercesc::XMLString::transcode(node->getTextContent());
-            }
-            else if (Attribute == "swathidentifier") {
-                SwathIdentifier = xercesc::XMLString::transcode(node->getTextContent());
-            }
-            else if (Attribute == "orbitdirection") {
-                OrbitDirection = xercesc::XMLString::transcode(node->getTextContent());
-            }
-            else if (Attribute == "polarisationmode") {
-                PolarisationMode = xercesc::XMLString::transcode(node->getTextContent());
-            }
-            else if (Attribute == "productclass") {
-                ProductClass = xercesc::XMLString::transcode(node->getTextContent());
-            }
-            else if (Attribute == "platformserialidentifier") {
-                PlatformSerialIdentifier = xercesc::XMLString::transcode(node->getTextContent());
-            }
-            else if (Attribute == "processinglevel") {
-                ProcessingLevel = xercesc::XMLString::transcode(node->getTextContent());
-            }
-            else if (Attribute == "producttype") {
-                ProductType = xercesc::XMLString::transcode(node->getTextContent());
-            }
-        }
-    }
+//    xercesc::DOMNodeList* nodeList = ProductEntry->getChildNodes();
+//    for (unsigned long i = 0; i < nodeList->getLength(); i++)
+//    {
+//        xercesc::DOMNode *node = nodeList->item(i);
+//        string nodeName = xercesc::XMLString::transcode(node->getNodeName());
+//        if (nodeName == "title")
+//        {
+//            Title = xercesc::XMLString::transcode(node->getTextContent());
+//        }
+//        else if (nodeName == "id")
+//        {
+//            UUID = xercesc::XMLString::transcode(node->getTextContent());
+//            get_url();
+//        }
+//        else if (nodeName == "str")
+//        {
+//            string Attribute = findAttributeValue("name", node);
+//            if (Attribute == "platformname") {
+//                PlatformName = xercesc::XMLString::transcode(node->getTextContent());
+//                set(Title);
+//            }
+//            else if (Attribute == "size") {
+//                string filesize = xercesc::XMLString::transcode(node->getTextContent());
+//                string unit;
+//                unit.assign(filesize,filesize.size()-2,filesize.size());
+//                filesize.assign(filesize,0,filesize.size()-3);
+//                FileSize = stod(filesize);
+//            }
+//            else if (Attribute == "instrumentshortname") {
+//                InstrumentShortname = xercesc::XMLString::transcode(node->getTextContent());
+//            }
+//            else if (Attribute == "sensoroperationalmode") {
+//                SensorOperationalMode = xercesc::XMLString::transcode(node->getTextContent());
+//            }
+//            else if (Attribute == "instrumentname") {
+//                InstrumentName = xercesc::XMLString::transcode(node->getTextContent());
+//            }
+//            else if (Attribute == "swathidentifier") {
+//                SwathIdentifier = xercesc::XMLString::transcode(node->getTextContent());
+//            }
+//            else if (Attribute == "orbitdirection") {
+//                OrbitDirection = xercesc::XMLString::transcode(node->getTextContent());
+//            }
+//            else if (Attribute == "polarisationmode") {
+//                PolarisationMode = xercesc::XMLString::transcode(node->getTextContent());
+//            }
+//            else if (Attribute == "productclass") {
+//                ProductClass = xercesc::XMLString::transcode(node->getTextContent());
+//            }
+//            else if (Attribute == "platformserialidentifier") {
+//                PlatformSerialIdentifier = xercesc::XMLString::transcode(node->getTextContent());
+//            }
+//            else if (Attribute == "processinglevel") {
+//                ProcessingLevel = xercesc::XMLString::transcode(node->getTextContent());
+//            }
+//            else if (Attribute == "producttype") {
+//                ProductType = xercesc::XMLString::transcode(node->getTextContent());
+//            }
+//        }
+//    }
 }
 
 void Product::set(std::string ProductTitle)

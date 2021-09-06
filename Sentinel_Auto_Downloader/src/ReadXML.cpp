@@ -6,8 +6,8 @@
 //  Copyright © 2018年 Constantine VI. All rights reserved.
 //
 
-#include "xercesc/parsers/XercesDOMParser.hpp"
-#include "xercesc/dom/DOM.hpp"
+#include <xercesc/parsers/XercesDOMParser.hpp>
+#include <xercesc/dom/DOM.hpp>
 #include "Product.h"
 #include <string>
 #include <vector>
