@@ -132,6 +132,7 @@
 				A7F4C75420EF11D2004B1E44 /* Configure.cpp */,
 				A76226F82142688F00F2D487 /* download.cpp */,
 				A7F4C74720EF11D1004B1E44 /* countline.cpp */,
+				A78539B2269405AD00C64827 /* node.cpp */,
 				A7F4C74B20EF11D2004B1E44 /* CreateProfile.cpp */,
 				A7F4C74920EF11D2004B1E44 /* isnumber.cpp */,
 				A7F4C75320EF11D2004B1E44 /* Product.cpp */,
@@ -156,6 +157,7 @@
 				A79269E726E21D1B00C71FA1 /* xml.hpp */,
 				A7C4202F2189A9AF00211DFD /* download.hpp */,
 				A7F4C76820EF1239004B1E44 /* Product.h */,
+				A78539B12694058B00C64827 /* node.hpp */,
 				A7F4C76720EF1239004B1E44 /* sad.h */,
 				A7F4C76620EF1239004B1E44 /* SearchProfile.h */,
 			);
@@ -377,6 +379,7 @@
 		A7F4C74320EF1130004B1E44 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WGCBB83Q4T;
 				HEADER_SEARCH_PATHS = (
