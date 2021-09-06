@@ -1,9 +1,9 @@
 //
 //  node.hpp
-//  SNAP_SBAS
+//  Automatic SAR Processing System
 //
 //  Created by Constantine VI on 2018/8/7.
-//  Copyright © 2018年 Constantine VI. All rights reserved.
+//  Copyright © 2018 Constantine VI. All rights reserved.
 //
 
 #ifndef node_hpp
@@ -13,19 +13,36 @@
 #include <string>
 #include <vector>
 
-xercesc::DOMNode *findNodebyNodeName(std::string NodeName, xercesc::DOMNode *InputNode);
-xercesc::DOMNode *findNodebyAttribute(std::string AttributeName, std::string AttributeValue, xercesc::DOMNode *InputNode);
-xercesc::DOMElement *findElementbyNodeName(std::string NodeName, xercesc::DOMNode *InputNode);
-std::string findAttributeValue(std::string Attribute, xercesc::DOMNode *InputNode);
-std::string findNodeValuebyAttribute(std::string AttributeName, std::string AttributeValue, xercesc::DOMNode *InputNode);
-std::vector<xercesc::DOMNode*> findNodesbyNodeName(std::string NodeName, xercesc::DOMNode *Data_Access);
-std::vector<xercesc::DOMNode*> findNodesbyAttribute(std::string AttributeName, std::string AttributeValue, xercesc::DOMNode *InputNode);
-std::vector<xercesc::DOMNode*> findNodesincludeAttribute(std::string AttributeName, std::string AttributeValue, xercesc::DOMNode *InputNode);
-xercesc::DOMNode *getNodebyName(std::string NodeName, std::string NodeValue, std::vector<xercesc::DOMNode*> InputNodes);
-xercesc::DOMNode *getNodeincludeAttribute(std::string AttributeName, std::string AttributeValue, std::vector<xercesc::DOMNode*> InputNodes);
-void replaceTextContentbyNodeName(std::string NodeName, std::string TextContent,xercesc::DOMNode *InputNode);
-void replaceTextContentbyAttribute(std::string AttributeName, std::string AttributeValue, std::string TextContent,xercesc::DOMNode *InputNode);
-void replaceAttributeValue(std::string AttributeName, std::string AttributeValue, xercesc::DOMNode *InputNode);
-void listChildNode(xercesc::DOMNode *InputNode);
+#if defined(_DEBUG) || defined(DEBUG)
+#define debugPrint(x) std::cerr << x << std::endl;
+#else
+#define debugPrint(x)
+#endif
+
+class node
+{
+private:
+    int iStatus = 0;
+    xercesc::DOMNode* nodeCurrentNode;
+    xercesc::DOMElement* elementCurrentNode;
+public:
+    node();
+    node(xercesc::DOMNode* Node);
+    node(xercesc::DOMElement* Node);
+    node getNodebyName(std::string NodeName);
+    node getNodebyAttribute(std::string AttributeName, std::string AttributeValue);
+    node clone();
+    std::string getNodeName();
+    std::string getNodeValue();
+    std::string getAttributeValue(std::string Attribute);
+    int getStatus();
+    int appendChild(node ChildElement);
+    int setAttribute(std::string Name, std::string Value);
+    int setTextContent(std::string TextContent);
+    std::vector<node> findNodesChildNode();
+    std::vector<node> findNodesbyName(std::string NodeName);
+    std::vector<node> findNodesbyAttribute(std::string AttributeName, std::string AttributeValue);
+    void listChildNode();
+};
 
 #endif /* node_hpp */
