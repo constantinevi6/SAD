@@ -1,0 +1,3 @@
+Target dependency graph (2 targets)
+SAD in Sentinel Auto Downloader
+Sentinel Auto Downloader in Sentinel Auto Downloader

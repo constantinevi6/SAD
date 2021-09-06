@@ -93,8 +93,8 @@
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)include;D:\Users\constantinevi\Documents\Visual Studio 2019\Projects\xerces-c-3.2.2\src;D:\Users\constantinevi\Documents\Visual Studio 2019\Projects\curl-7.68.0\include;D:\Users\constantinevi\Documents\Visual Studio 2019\Projects\xerces-c-3.2.2\build\src;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Users\constantinevi\Documents\Visual Studio 2019\Projects\xerces-c-3.2.2\build\src\Release;D:\Users\constantinevi\Documents\Visual Studio 2019\Projects\curl-7.68.0\build\lib\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;D:\SAROP_NAS_I\Develop\xerces-c\include;D:\SAROP_NAS_I\Develop\curl\include;D:\SAROP_NAS_I\Develop\zlib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\SAROP_NAS_I\Develop\xerces-c\lib;D:\SAROP_NAS_I\Develop\curl\lib;D:\SAROP_NAS_I\Develop\zlib\lib;$(LibraryPath)</LibraryPath>
     <TargetName>sad</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -138,7 +138,7 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>xerces-c_3.lib;libcurl.lib;Ws2_32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>xerces-c_3.lib;libcurl_a.lib;Ws2_32.lib;Wldap32.lib;zlibstatic.lib;Crypt32.lib;Normaliz.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
